@@ -1,0 +1,32 @@
+# talktocity-react/nginx.conf
+server {
+    listen 80;
+
+    # Use Docker/Podman bridge DNS resolver
+    # Prevents stale IP when backend container is restarted
+	#resolver 127.0.0.11 valid=10s ipv6=off;
+    resolver 10.89.1.1 valid=10s ipv6=off;
+    set $backend http://talktocity-backend:8000;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /api/ {
+        proxy_pass         $backend;
+        proxy_http_version 1.1;
+        proxy_set_header   Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_read_timeout 300s;
+    }
+
+    location /auth/ {
+        proxy_pass         $backend;
+        proxy_http_version 1.1;
+        proxy_set_header   Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_read_timeout 30s;
+    }
+}

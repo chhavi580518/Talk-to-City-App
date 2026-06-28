@@ -1,0 +1,25 @@
+# TalkToCity backend dependencies
+--extra-index-url https://download.pytorch.org/whl/cpu
+# API server
+fastapi
+uvicorn[standard]
+
+# Database
+langchain-postgres
+psycopg[binary]
+
+# Embeddings
+langchain-huggingface
+sentence-transformers
+
+# Config & HTTP
+python-dotenv
+requests
+
+# Auth
+google-auth
+python-jose[cryptography]
+
+# Network & Reliability (Inference Path)
+httpx
+tenacity

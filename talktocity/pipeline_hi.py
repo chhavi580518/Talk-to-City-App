@@ -1,0 +1,61 @@
+"""
+pipeline_hi.py
+--------------
+Hindi RAG pipeline for TalkToCity.
+Answers travel questions in Hindi using grounded context from PGVector.
+
+Usage (CLI):
+    python pipeline_hi.py
+"""
+import asyncio
+from rag_core import (
+    retrieve_chunks,
+    build_context,
+    call_llm,
+    print_retrieved_sources,
+)
+
+from prompts import get_prompt_hi
+
+async def generate_grounded_hindi_answer(question: str, docs: list, intent: str = "general") -> str:
+    context = build_context(docs)
+
+    prompt = get_prompt_hi(question, context, intent)
+    return await call_llm(prompt, temperature=0.1, max_tokens=4096)
+
+
+def main() -> None:
+    question = input("Enter question: ").strip()
+    city     = input("Enter city filter (leave blank for all): ").strip()
+
+    if not question:
+        print("No question entered.")
+        return
+
+    if city:
+        city = city.title()
+
+    docs = retrieve_chunks(
+        question,
+        city if city else None,
+        k=8,
+        fetch_k=24,
+        lambda_mult=0.65,
+        use_expansion=True,
+    )
+
+    if not docs:
+        print("No relevant chunks found.")
+        return
+
+    print_retrieved_sources(docs)
+    print("\nGenerating grounded Hindi answer...\n")
+
+    answer = asyncio.run(generate_grounded_hindi_answer(question, docs))
+
+    print("Final Answer:\n")
+    print(answer)
+
+
+if __name__ == "__main__":
+    main()

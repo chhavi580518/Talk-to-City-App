@@ -1,0 +1,1818 @@
+[
+  {
+    "id": "DEL_UND_001",
+    "city": "Delhi",
+    "category": "understand",
+    "query_en": "History of Delhi",
+    "query_hi": "दिल्ली का इतिहास",
+    "expected_sections": ["Understand"],
+    "expected_keywords": ["Mughal", "British rule", "Capital of India"]
+  },
+  {
+    "id": "DEL_UND_002",
+    "city": "Delhi",
+    "category": "understand",
+    "query_en": "Culture and traditions of Delhi",
+    "query_hi": "दिल्ली की संस्कृति और परंपराएं",
+    "expected_sections": ["Understand"],
+    "expected_keywords": ["Festivals", "Diversity", "Heritage"]
+  },
+  {
+    "id": "DEL_GETIN_003",
+    "city": "Delhi",
+    "category": "get_in",
+    "query_en": "How to reach Delhi by train",
+    "query_hi": "दिल्ली ट्रेन से कैसे पहुंचे",
+    "expected_sections": ["Get in"],
+    "expected_keywords": ["Railway station", "New Delhi station", "IRCTC"]
+  },
+  {
+    "id": "DEL_GETIN_004",
+    "city": "Delhi",
+    "category": "get_in",
+    "query_en": "Flights to Delhi airport",
+    "query_hi": "दिल्ली हवाई अड्डे के लिए उड़ानें",
+    "expected_sections": ["Get in"],
+    "expected_keywords": ["IGI Airport", "Terminal 3", "Domestic flights"]
+  },
+  {
+    "id": "DEL_GETAR_005",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Delhi metro route map",
+    "query_hi": "दिल्ली मेट्रो रूट मैप",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["DMRC", "Blue Line", "Yellow Line"]
+  },
+  {
+    "id": "DEL_GETAR_006",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Auto and cab services in Delhi",
+    "query_hi": "दिल्ली में ऑटो और कैब सेवाएं",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["Ola", "Uber", "Auto rickshaw"]
+  },
+  {
+    "id": "DEL_SEE_007",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Red Fort visiting information",
+    "query_hi": "लाल किला घूमने की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Red Fort", "UNESCO", "Entry fee"]
+  },
+  {
+    "id": "DEL_SEE_008",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "India Gate details",
+    "query_hi": "इंडिया गेट की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["War memorial", "Rajpath", "Evening visit"]
+  },
+  {
+    "id": "DEL_DO_009",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Things to do in Connaught Place",
+    "query_hi": "कनॉट प्लेस में क्या करें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Shopping", "Restaurants", "Street performances"]
+  },
+  {
+    "id": "DEL_BUY_010",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Best shopping markets in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छे खरीदारी बाजार",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Sarojini Nagar", "Lajpat Nagar", "Dilli Haat"]
+  },
+  {
+    "id": "DEL_GETAR_011",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Best way to travel inside Delhi",
+    "query_hi": "दिल्ली के अंदर घूमने का सबसे अच्छा तरीका",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["Metro", "Bus", "Auto"]
+  },
+  {
+    "id": "DEL_SEE_012",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Qutub Minar visiting guide",
+    "query_hi": "कुतुब मीनार घूमने की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Qutub Minar", "UNESCO", "Timings"]
+  },
+  {
+    "id": "DEL_SEE_013",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Lotus Temple information",
+    "query_hi": "लोटस टेंपल की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Bahai Temple", "Prayer hall", "Opening hours"]
+  },
+  {
+    "id": "DEL_DO_014",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Things to do in Delhi at night",
+    "query_hi": "दिल्ली में रात में क्या करें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["India Gate", "Night markets", "Clubs"]
+  },
+  {
+    "id": "DEL_EAT_015",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best street food in Chandni Chowk",
+    "query_hi": "चांदनी चौक में सबसे अच्छा स्ट्रीट फूड",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Paranthe Wali Gali", "Chaat", "Jalebi"]
+  },
+
+  {
+    "id": "DEL_DRINK_016",
+    "city": "Delhi",
+    "category": "drink",
+    "query_en": "Best pubs in Hauz Khas",
+    "query_hi": "हौज खास में सबसे अच्छे पब",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Hauz Khas Village", "Clubs", "Bars"]
+  },
+  {
+    "id": "DEL_SLEEP_017",
+    "city": "Delhi",
+    "category": "sleep",
+    "query_en": "Budget hotels in Paharganj",
+    "query_hi": "पहाड़गंज में सस्ते होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Paharganj", "Budget hotel", "Guesthouse"]
+  },
+  {
+    "id": "DEL_SAFE_018",
+    "city": "Delhi",
+    "category": "stay_safe",
+    "query_en": "Is Delhi safe for tourists?",
+    "query_hi": "क्या दिल्ली पर्यटकों के लिए सुरक्षित है?",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Safety tips", "Police helpline", "Safe areas"]
+  },
+  {
+    "id": "DEL_HEALTH_019",
+    "city": "Delhi",
+    "category": "stay_healthy",
+    "query_en": "Health precautions for Delhi pollution",
+    "query_hi": "दिल्ली प्रदूषण से बचाव के उपाय",
+    "expected_sections": ["Stay healthy"],
+    "expected_keywords": ["Air pollution", "Mask", "AQI"]
+  },
+  {
+    "id": "DEL_NEXT_020",
+    "city": "Delhi",
+    "category": "go_next",
+    "query_en": "Weekend trips from Delhi",
+    "query_hi": "दिल्ली से वीकेंड ट्रिप",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Agra", "Jaipur", "Rishikesh"]
+  },
+  {
+    "id": "DEL_UND_021",
+    "city": "Delhi",
+    "category": "understand",
+    "query_en": "Why is Delhi the capital of India?",
+    "query_hi": "दिल्ली भारत की राजधानी क्यों है?",
+    "expected_sections": ["Understand"],
+    "expected_keywords": ["Capital city", "History", "Political center"]
+  },
+  {
+    "id": "DEL_UND_022",
+    "city": "Delhi",
+    "category": "understand",
+    "query_en": "Famous festivals celebrated in Delhi",
+    "query_hi": "दिल्ली में मनाए जाने वाले प्रसिद्ध त्योहार",
+    "expected_sections": ["Understand"],
+    "expected_keywords": ["Diwali", "Eid", "Holi"]
+  },
+  {
+    "id": "DEL_GETIN_023",
+    "city": "Delhi",
+    "category": "get_in",
+    "query_en": "How to reach Delhi by bus",
+    "query_hi": "दिल्ली बस से कैसे पहुंचे",
+    "expected_sections": ["Get in"],
+    "expected_keywords": ["ISBT", "Interstate bus", "Kashmere Gate"]
+  },
+  {
+    "id": "DEL_GETIN_024",
+    "city": "Delhi",
+    "category": "get_in",
+    "query_en": "Nearest airport to central Delhi",
+    "query_hi": "केंद्रीय दिल्ली के पास का हवाई अड्डा",
+    "expected_sections": ["Get in"],
+    "expected_keywords": ["IGI Airport", "Terminal 3", "Domestic"]
+  },
+  {
+    "id": "DEL_GETAR_025",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Delhi metro smart card recharge",
+    "query_hi": "दिल्ली मेट्रो स्मार्ट कार्ड रिचार्ज",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["DMRC", "Recharge", "Metro card"]
+  },
+  {
+    "id": "DEL_GETAR_026",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Delhi bus routes information",
+    "query_hi": "दिल्ली बस रूट की जानकारी",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["DTC", "Cluster bus", "Route map"]
+  },
+  {
+    "id": "DEL_SEE_027",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Humayun’s Tomb visiting details",
+    "query_hi": "हुमायूं का मकबरा घूमने की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["UNESCO", "Mughal architecture", "Timings"]
+  },
+  {
+    "id": "DEL_SEE_028",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Akshardham Temple guide",
+    "query_hi": "अक्षरधाम मंदिर गाइड",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Temple complex", "Exhibition", "Entry rules"]
+  },
+  {
+    "id": "DEL_SEE_029",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Best parks in Delhi",
+    "query_hi": "दिल्ली के सबसे अच्छे पार्क",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Lodhi Garden", "Nehru Park", "Deer Park"]
+  },
+  {
+    "id": "DEL_SEE_030",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "National Museum Delhi information",
+    "query_hi": "राष्ट्रीय संग्रहालय दिल्ली की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Artifacts", "History", "Timings"]
+  },
+
+  {
+    "id": "DEL_DO_031",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Heritage walks in Delhi",
+    "query_hi": "दिल्ली में हेरिटेज वॉक",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Old Delhi", "Guided tour", "Historical sites"]
+  },
+  {
+    "id": "DEL_DO_032",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Adventure activities in Delhi",
+    "query_hi": "दिल्ली में एडवेंचर गतिविधियां",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Rock climbing", "Adventure park", "Activities"]
+  },
+  {
+    "id": "DEL_DO_033",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Cultural shows in Delhi",
+    "query_hi": "दिल्ली में सांस्कृतिक कार्यक्रम",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Kathak", "Auditorium", "Events"]
+  },
+  {
+    "id": "DEL_BUY_034",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Where to buy handicrafts in Delhi",
+    "query_hi": "दिल्ली में हस्तशिल्प कहां खरीदें",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Dilli Haat", "Handicrafts", "Souvenirs"]
+  },
+  {
+    "id": "DEL_BUY_035",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Best malls in Delhi",
+    "query_hi": "दिल्ली के सबसे अच्छे मॉल",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Select Citywalk", "DLF Mall", "Ambience Mall"]
+  },
+  {
+    "id": "DEL_EAT_036",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best biryani in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छी बिरयानी",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Karim's", "Old Delhi", "Biryani"]
+  },
+  {
+    "id": "DEL_EAT_037",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Vegetarian restaurants in Delhi",
+    "query_hi": "दिल्ली में शाकाहारी रेस्टोरेंट",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Veg food", "Restaurant", "North Indian"]
+  },
+  {
+    "id": "DEL_DRINK_038",
+    "city": "Delhi",
+    "category": "drink",
+    "query_en": "Best rooftop bars in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छे रूफटॉप बार",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Rooftop", "Connaught Place", "Cocktails"]
+  },
+  {
+    "id": "DEL_SLEEP_039",
+    "city": "Delhi",
+    "category": "sleep",
+    "query_en": "Luxury hotels in Delhi",
+    "query_hi": "दिल्ली में लग्जरी होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Taj Palace", "Oberoi", "Five star"]
+  },
+  {
+    "id": "DEL_SAFE_040",
+    "city": "Delhi",
+    "category": "stay_safe",
+    "query_en": "Emergency numbers in Delhi",
+    "query_hi": "दिल्ली में आपातकालीन नंबर",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Police", "Ambulance", "Helpline"]
+  },
+
+  {
+    "id": "DEL_HEALTH_041",
+    "city": "Delhi",
+    "category": "stay_healthy",
+    "query_en": "Hospitals for tourists in Delhi",
+    "query_hi": "दिल्ली में पर्यटकों के लिए अस्पताल",
+    "expected_sections": ["Stay healthy"],
+    "expected_keywords": ["AIIMS", "Apollo Hospital", "Emergency"]
+  },
+  {
+    "id": "DEL_NEXT_042",
+    "city": "Delhi",
+    "category": "go_next",
+    "query_en": "Best hill stations near Delhi",
+    "query_hi": "दिल्ली के पास सबसे अच्छे हिल स्टेशन",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Mussoorie", "Nainital", "Shimla"]
+  },
+  {
+    "id": "DEL_NEXT_043",
+    "city": "Delhi",
+    "category": "go_next",
+    "query_en": "Road trips from Delhi",
+    "query_hi": "दिल्ली से रोड ट्रिप",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Jaipur", "Agra", "Rishikesh"]
+  },
+  {
+    "id": "DEL_SEE_044",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Best photography spots in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छे फोटोग्राफी स्थल",
+    "expected_sections": ["See"],
+    "expected_keywords": ["India Gate", "Lodhi Garden", "Humayun's Tomb"]
+  },
+  {
+    "id": "DEL_DO_045",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Food tours in Delhi",
+    "query_hi": "दिल्ली में फूड टूर",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Old Delhi", "Street food", "Guided tour"]
+  },
+  {
+    "id": "DEL_BUY_046",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Cheap clothes market in Delhi",
+    "query_hi": "दिल्ली में सस्ते कपड़ों का बाजार",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Sarojini Nagar", "Lajpat Nagar", "Street shopping"]
+  },
+  {
+    "id": "DEL_EAT_047",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best cafes in Delhi",
+    "query_hi": "दिल्ली के सबसे अच्छे कैफे",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Hauz Khas", "Connaught Place", "Cafe"]
+  },
+  {
+    "id": "DEL_DRINK_048",
+    "city": "Delhi",
+    "category": "drink",
+    "query_en": "Nightlife in Delhi",
+    "query_hi": "दिल्ली की नाइटलाइफ",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Clubs", "Bars", "Hauz Khas"]
+  },
+  {
+    "id": "DEL_SLEEP_049",
+    "city": "Delhi",
+    "category": "sleep",
+    "query_en": "Hostels in Delhi for backpackers",
+    "query_hi": "दिल्ली में बैकपैकर्स के लिए हॉस्टल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Backpacker hostel", "Budget stay", "Paharganj"]
+  },
+  {
+    "id": "DEL_SAFE_050",
+    "city": "Delhi",
+    "category": "stay_safe",
+    "query_en": "Safe areas to stay in Delhi",
+    "query_hi": "दिल्ली में रहने के लिए सुरक्षित क्षेत्र",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["South Delhi", "Connaught Place", "Security"]
+  },
+
+  {
+    "id": "DEL_SEE_051",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Top historical monuments in Delhi",
+    "query_hi": "दिल्ली के प्रमुख ऐतिहासिक स्मारक",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Red Fort", "Qutub Minar", "Humayun's Tomb"]
+  },
+  {
+    "id": "DEL_DO_052",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Best things to do with family in Delhi",
+    "query_hi": "दिल्ली में परिवार के साथ करने योग्य चीजें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Zoo", "India Gate", "Parks"]
+  },
+  {
+    "id": "DEL_EAT_053",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Famous sweets in Delhi",
+    "query_hi": "दिल्ली की प्रसिद्ध मिठाइयां",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Jalebi", "Laddu", "Old Delhi"]
+  },
+  {
+    "id": "DEL_BUY_054",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Where to buy souvenirs in Delhi",
+    "query_hi": "दिल्ली में स्मृति चिन्ह कहां खरीदें",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Dilli Haat", "Janpath", "Handicrafts"]
+  },
+  {
+    "id": "DEL_GETAR_055",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Delhi metro last train timing",
+    "query_hi": "दिल्ली मेट्रो की अंतिम ट्रेन का समय",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["Last train", "Metro timing", "DMRC"]
+  },
+  {
+    "id": "DEL_SEE_056",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Best museums in Delhi",
+    "query_hi": "दिल्ली के सबसे अच्छे संग्रहालय",
+    "expected_sections": ["See"],
+    "expected_keywords": ["National Museum", "Rail Museum", "Artifacts"]
+  },
+  {
+    "id": "DEL_DO_057",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Romantic places in Delhi",
+    "query_hi": "दिल्ली में रोमांटिक स्थान",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Garden", "India Gate", "Evening walk"]
+  },
+  {
+    "id": "DEL_EAT_058",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best North Indian food in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छा नॉर्थ इंडियन खाना",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Butter chicken", "Paneer", "Restaurant"]
+  },
+  {
+    "id": "DEL_SLEEP_059",
+    "city": "Delhi",
+    "category": "sleep",
+    "query_en": "Hotels near Delhi airport",
+    "query_hi": "दिल्ली एयरपोर्ट के पास होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["IGI Airport", "Aerocity", "Hotel"]
+  },
+  {
+    "id": "DEL_NEXT_060",
+    "city": "Delhi",
+    "category": "go_next",
+    "query_en": "Best places near Delhi for 2 day trip",
+    "query_hi": "दिल्ली के पास 2 दिन की यात्रा के लिए स्थान",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Agra", "Jaipur", "Haridwar"]
+  },
+  {
+    "id": "DEL_UND_061",
+    "city": "Delhi",
+    "category": "understand",
+    "query_en": "Languages spoken in Delhi",
+    "query_hi": "दिल्ली में बोली जाने वाली भाषाएं",
+    "expected_sections": ["Understand"],
+    "expected_keywords": ["Hindi", "English", "Punjabi"]
+  },
+  {
+    "id": "DEL_UND_062",
+    "city": "Delhi",
+    "category": "understand",
+    "query_en": "Climate of Delhi throughout the year",
+    "query_hi": "साल भर दिल्ली का मौसम",
+    "expected_sections": ["Understand"],
+    "expected_keywords": ["Summer", "Winter", "Monsoon"]
+  },
+  {
+    "id": "DEL_GETIN_063",
+    "city": "Delhi",
+    "category": "get_in",
+    "query_en": "How to reach Delhi from Jaipur",
+    "query_hi": "जयपुर से दिल्ली कैसे पहुंचे",
+    "expected_sections": ["Get in"],
+    "expected_keywords": ["Train", "Bus", "Highway"]
+  },
+  {
+    "id": "DEL_GETIN_064",
+    "city": "Delhi",
+    "category": "get_in",
+    "query_en": "International flights to Delhi",
+    "query_hi": "दिल्ली के लिए अंतरराष्ट्रीय उड़ानें",
+    "expected_sections": ["Get in"],
+    "expected_keywords": ["IGI Airport", "Terminal 3", "International"]
+  },
+  {
+    "id": "DEL_GETAR_065",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Delhi metro tourist card details",
+    "query_hi": "दिल्ली मेट्रो टूरिस्ट कार्ड की जानकारी",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["Tourist card", "DMRC", "Unlimited rides"]
+  },
+  {
+    "id": "DEL_GETAR_066",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Bike rental services in Delhi",
+    "query_hi": "दिल्ली में बाइक किराए पर",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["Bike rental", "Scooter", "Hourly rent"]
+  },
+  {
+    "id": "DEL_SEE_067",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Jama Masjid visiting guide",
+    "query_hi": "जामा मस्जिद घूमने की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Old Delhi", "Mosque", "Timings"]
+  },
+  {
+    "id": "DEL_SEE_068",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Lodhi Garden information",
+    "query_hi": "लोदी गार्डन की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Park", "Tombs", "Morning walk"]
+  },
+  {
+    "id": "DEL_SEE_069",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Best sunset spots in Delhi",
+    "query_hi": "दिल्ली में सूर्यास्त देखने के स्थान",
+    "expected_sections": ["See"],
+    "expected_keywords": ["India Gate", "Yamuna Ghat", "Ridge"]
+  },
+  {
+    "id": "DEL_SEE_070",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Rashtrapati Bhavan visit details",
+    "query_hi": "राष्ट्रपति भवन भ्रमण की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["President House", "Mughal Gardens", "Booking"]
+  },
+
+  {
+    "id": "DEL_DO_071",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Shopping festival events in Delhi",
+    "query_hi": "दिल्ली में शॉपिंग फेस्टिवल कार्यक्रम",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Festival", "Sale", "Events"]
+  },
+  {
+    "id": "DEL_DO_072",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Live music venues in Delhi",
+    "query_hi": "दिल्ली में लाइव म्यूजिक स्थल",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Concert", "Club", "Performance"]
+  },
+  {
+    "id": "DEL_DO_073",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Best activities for kids in Delhi",
+    "query_hi": "दिल्ली में बच्चों के लिए गतिविधियां",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Zoo", "Adventure park", "Museum"]
+  },
+  {
+    "id": "DEL_BUY_074",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Electronics markets in Delhi",
+    "query_hi": "दिल्ली में इलेक्ट्रॉनिक्स बाजार",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Nehru Place", "Lajpat Rai Market", "Electronics"]
+  },
+  {
+    "id": "DEL_BUY_075",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Best book markets in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छे किताब बाजार",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Daryaganj", "Book market", "Second hand books"]
+  },
+  {
+    "id": "DEL_EAT_076",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best Mughlai food in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छा मुगलई खाना",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Karim's", "Mughlai", "Kebab"]
+  },
+  {
+    "id": "DEL_EAT_077",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best South Indian restaurants in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छे दक्षिण भारतीय रेस्टोरेंट",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Dosa", "Idli", "Restaurant"]
+  },
+  {
+    "id": "DEL_DRINK_078",
+    "city": "Delhi",
+    "category": "drink",
+    "query_en": "Best cocktail bars in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छे कॉकटेल बार",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Cocktails", "Bar", "Nightlife"]
+  },
+  {
+    "id": "DEL_SLEEP_079",
+    "city": "Delhi",
+    "category": "sleep",
+    "query_en": "Family hotels in Delhi",
+    "query_hi": "दिल्ली में परिवार के लिए होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Family room", "Hotel", "Comfort"]
+  },
+  {
+    "id": "DEL_SAFE_080",
+    "city": "Delhi",
+    "category": "stay_safe",
+    "query_en": "Women safety tips in Delhi",
+    "query_hi": "दिल्ली में महिलाओं के लिए सुरक्षा सुझाव",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Helpline", "Safe transport", "Precautions"]
+  },
+
+  {
+    "id": "DEL_HEALTH_081",
+    "city": "Delhi",
+    "category": "stay_healthy",
+    "query_en": "Water safety tips in Delhi",
+    "query_hi": "दिल्ली में पानी की सुरक्षा सुझाव",
+    "expected_sections": ["Stay healthy"],
+    "expected_keywords": ["Bottled water", "Hygiene", "Precaution"]
+  },
+  {
+    "id": "DEL_NEXT_082",
+    "city": "Delhi",
+    "category": "go_next",
+    "query_en": "Best pilgrimage sites near Delhi",
+    "query_hi": "दिल्ली के पास तीर्थ स्थल",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Mathura", "Haridwar", "Vrindavan"]
+  },
+  {
+    "id": "DEL_NEXT_083",
+    "city": "Delhi",
+    "category": "go_next",
+    "query_en": "Desert destinations near Delhi",
+    "query_hi": "दिल्ली के पास रेगिस्तानी स्थान",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Rajasthan", "Jaipur", "Jaisalmer"]
+  },
+  {
+    "id": "DEL_SEE_084",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Best art galleries in Delhi",
+    "query_hi": "दिल्ली की कला दीर्घाएं",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Art gallery", "Exhibition", "Modern art"]
+  },
+  {
+    "id": "DEL_DO_085",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Yoga classes for tourists in Delhi",
+    "query_hi": "दिल्ली में पर्यटकों के लिए योग कक्षाएं",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Yoga", "Wellness", "Classes"]
+  },
+  {
+    "id": "DEL_BUY_086",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Best jewelry markets in Delhi",
+    "query_hi": "दिल्ली में आभूषण बाजार",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Jewelry", "Karol Bagh", "Gold"]
+  },
+  {
+    "id": "DEL_EAT_087",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best breakfast places in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छे नाश्ते के स्थान",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Cafe", "Breakfast", "Paratha"]
+  },
+  {
+    "id": "DEL_DRINK_088",
+    "city": "Delhi",
+    "category": "drink",
+    "query_en": "Coffee shops in Connaught Place",
+    "query_hi": "कनॉट प्लेस में कॉफी शॉप्स",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Cafe", "Coffee", "CP"]
+  },
+  {
+    "id": "DEL_SLEEP_089",
+    "city": "Delhi",
+    "category": "sleep",
+    "query_en": "Cheap guesthouses in Delhi",
+    "query_hi": "दिल्ली में सस्ते गेस्टहाउस",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Guesthouse", "Budget", "Paharganj"]
+  },
+  {
+    "id": "DEL_SAFE_090",
+    "city": "Delhi",
+    "category": "stay_safe",
+    "query_en": "Common tourist scams in Delhi",
+    "query_hi": "दिल्ली में आम पर्यटक धोखाधड़ी",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Scam", "Tourist fraud", "Awareness"]
+  },
+
+  {
+    "id": "DEL_SEE_091",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Best heritage sites in Delhi",
+    "query_hi": "दिल्ली के प्रमुख धरोहर स्थल",
+    "expected_sections": ["See"],
+    "expected_keywords": ["UNESCO", "Monuments", "Heritage"]
+  },
+  {
+    "id": "DEL_DO_092",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Street photography locations in Delhi",
+    "query_hi": "दिल्ली में स्ट्रीट फोटोग्राफी स्थल",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Old Delhi", "Markets", "Heritage"]
+  },
+  {
+    "id": "DEL_EAT_093",
+    "city": "Delhi",
+    "category": "eat",
+    "query_en": "Best chaat in Delhi",
+    "query_hi": "दिल्ली में सबसे अच्छी चाट",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Chandni Chowk", "Street food", "Chaat"]
+  },
+  {
+    "id": "DEL_BUY_094",
+    "city": "Delhi",
+    "category": "buy",
+    "query_en": "Wholesale markets in Delhi",
+    "query_hi": "दिल्ली में थोक बाजार",
+    "expected_sections": ["Buy"],
+    "expected_keywords": ["Sadar Bazaar", "Wholesale", "Market"]
+  },
+  {
+    "id": "DEL_GETAR_095",
+    "city": "Delhi",
+    "category": "get_around",
+    "query_en": "Best time to avoid traffic in Delhi",
+    "query_hi": "दिल्ली में ट्रैफिक से बचने का समय",
+    "expected_sections": ["Get around"],
+    "expected_keywords": ["Rush hour", "Traffic", "Peak time"]
+  },
+  {
+    "id": "DEL_SEE_096",
+    "city": "Delhi",
+    "category": "see",
+    "query_en": "Yamuna riverfront visit",
+    "query_hi": "यमुना रिवरफ्रंट भ्रमण",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Yamuna", "Riverfront", "Nature"]
+  },
+  {
+    "id": "DEL_DO_097",
+    "city": "Delhi",
+    "category": "do",
+    "query_en": "Best weekend workshops in Delhi",
+    "query_hi": "दिल्ली में वीकेंड वर्कशॉप",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Workshop", "Art", "Learning"]
+  },
+  {
+    "id": "DEL_SLEEP_098",
+    "city": "Delhi",
+    "category": "sleep",
+    "query_en": "Pet friendly hotels in Delhi",
+    "query_hi": "दिल्ली में पालतू जानवरों के लिए होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Pet friendly", "Hotel", "Stay"]
+  },
+  {
+    "id": "DEL_HEALTH_099",
+    "city": "Delhi",
+    "category": "stay_healthy",
+    "query_en": "Travel insurance advice for Delhi trip",
+    "query_hi": "दिल्ली यात्रा के लिए ट्रैवल इंश्योरेंस सलाह",
+    "expected_sections": ["Stay healthy"],
+    "expected_keywords": ["Insurance", "Medical", "Coverage"]
+  },
+  {
+    "id": "DEL_NEXT_100",
+    "city": "Delhi",
+    "category": "go_next",
+    "query_en": "Best historical cities near Delhi",
+    "query_hi": "दिल्ली के पास ऐतिहासिक शहर",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Agra", "Jaipur", "Fatehpur Sikri"]
+  },
+  {
+    "id": "UDP_SEE_001",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Best places to visit in Udaipur",
+    "query_hi": "उदयपुर में घूमने की सबसे अच्छी जगहें",
+    "expected_sections": ["See"],
+    "expected_keywords": ["City Palace", "Lake Pichola", "Jag Mandir"]
+  },
+  {
+    "id": "UDP_SEE_002",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "City Palace Udaipur guide",
+    "query_hi": "उदयपुर सिटी पैलेस की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["City Palace", "Museum", "Timings"]
+  },
+  {
+    "id": "UDP_SEE_003",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Lake Pichola boat ride details",
+    "query_hi": "पिचोला झील बोट राइड की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Lake Pichola", "Boat ride", "Sunset"]
+  },
+  {
+    "id": "UDP_SEE_004",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Jag Mandir information",
+    "query_hi": "जग मंदिर की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Jag Mandir", "Island palace", "Lake Pichola"]
+  },
+  {
+    "id": "UDP_SEE_005",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Best lakes in Udaipur",
+    "query_hi": "उदयपुर की सबसे सुंदर झीलें",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Fateh Sagar Lake", "Lake Pichola", "Udai Sagar"]
+  },
+  {
+    "id": "UDP_DO_006",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Things to do in Udaipur at night",
+    "query_hi": "उदयपुर में रात में क्या करें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Lake view", "Cultural show", "Rooftop dining"]
+  },
+  {
+    "id": "UDP_DO_007",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Cultural shows in Udaipur",
+    "query_hi": "उदयपुर में सांस्कृतिक कार्यक्रम",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Bagore Ki Haveli", "Dance show", "Rajasthani folk"]
+  },
+  {
+    "id": "UDP_DO_008",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Best sunset points in Udaipur",
+    "query_hi": "उदयपुर में सबसे अच्छे सनसेट पॉइंट",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Fateh Sagar", "Lake Pichola", "Sunset view"]
+  },
+  {
+    "id": "UDP_EAT_009",
+    "city": "Udaipur",
+    "category": "eat",
+    "query_en": "Best restaurants in Udaipur",
+    "query_hi": "उदयपुर के सबसे अच्छे रेस्टोरेंट",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Rajasthani thali", "Lake view restaurant", "Dal Baati"]
+  },
+  {
+    "id": "UDP_EAT_010",
+    "city": "Udaipur",
+    "category": "eat",
+    "query_en": "Famous food in Udaipur",
+    "query_hi": "उदयपुर का प्रसिद्ध खाना",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Dal Baati", "Gatte ki sabzi", "Kachori"]
+  },
+
+  {
+    "id": "UDP_DRINK_011",
+    "city": "Udaipur",
+    "category": "drink",
+    "query_en": "Best rooftop cafes in Udaipur",
+    "query_hi": "उदयपुर के सबसे अच्छे रूफटॉप कैफे",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Lake view", "Rooftop cafe", "Sunset"]
+  },
+  {
+    "id": "UDP_SLEEP_012",
+    "city": "Udaipur",
+    "category": "sleep",
+    "query_en": "Luxury hotels in Udaipur",
+    "query_hi": "उदयपुर के लक्ज़री होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Lake Palace", "Heritage hotel", "5 star"]
+  },
+  {
+    "id": "UDP_SLEEP_013",
+    "city": "Udaipur",
+    "category": "sleep",
+    "query_en": "Budget hotels in Udaipur",
+    "query_hi": "उदयपुर में सस्ते होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Guesthouse", "Budget stay", "Hostel"]
+  },
+  {
+    "id": "UDP_SAFE_014",
+    "city": "Udaipur",
+    "category": "stay_safe",
+    "query_en": "Is Udaipur safe for tourists?",
+    "query_hi": "क्या उदयपुर पर्यटकों के लिए सुरक्षित है?",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Tourist safety", "Police", "Travel tips"]
+  },
+  {
+    "id": "UDP_NEXT_015",
+    "city": "Udaipur",
+    "category": "go_next",
+    "query_en": "Places to visit near Udaipur",
+    "query_hi": "उदयपुर के पास घूमने की जगहें",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Kumbhalgarh", "Mount Abu", "Ranakpur"]
+  },
+
+  {
+    "id": "UDP_SEE_016",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Bagore Ki Haveli details",
+    "query_hi": "बागोर की हवेली की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Bagore Ki Haveli", "Museum", "Cultural show"]
+  },
+  {
+    "id": "UDP_SEE_017",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Fateh Sagar Lake guide",
+    "query_hi": "फतेह सागर झील की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Fateh Sagar Lake", "Boating", "Sunset"]
+  },
+  {
+    "id": "UDP_SEE_018",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Saheliyon Ki Bari information",
+    "query_hi": "सहेलियों की बाड़ी की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Garden", "Fountains", "Marble elephants"]
+  },
+  {
+    "id": "UDP_DO_019",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Shopping in Udaipur",
+    "query_hi": "उदयपुर में शॉपिंग कहाँ करें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Hathi Pol", "Bada Bazaar", "Handicrafts"]
+  },
+  {
+    "id": "UDP_DO_020",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Heritage walks in Udaipur",
+    "query_hi": "उदयपुर में हेरिटेज वॉक",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Old city", "Walking tour", "Local guide"]
+  },
+
+  {
+    "id": "UDP_EAT_021",
+    "city": "Udaipur",
+    "category": "eat",
+    "query_en": "Best places for Dal Baati in Udaipur",
+    "query_hi": "उदयपुर में दाल बाटी खाने की सबसे अच्छी जगह",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Dal Baati", "Rajasthani food", "Thali"]
+  },
+  {
+    "id": "UDP_DRINK_022",
+    "city": "Udaipur",
+    "category": "drink",
+    "query_en": "Best cafes near Lake Pichola",
+    "query_hi": "पिचोला झील के पास अच्छे कैफे",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Lake view cafe", "Coffee", "Rooftop"]
+  },
+  {
+    "id": "UDP_SLEEP_023",
+    "city": "Udaipur",
+    "category": "sleep",
+    "query_en": "Best lake view hotels in Udaipur",
+    "query_hi": "उदयपुर में लेक व्यू होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Lake Palace", "Lake view", "Heritage hotel"]
+  },
+  {
+    "id": "UDP_SAFE_024",
+    "city": "Udaipur",
+    "category": "stay_safe",
+    "query_en": "Travel safety tips for Udaipur",
+    "query_hi": "उदयपुर यात्रा सुरक्षा सुझाव",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Tourist safety", "Crowded areas", "Emergency"]
+  },
+  {
+    "id": "UDP_NEXT_025",
+    "city": "Udaipur",
+    "category": "go_next",
+    "query_en": "Day trips from Udaipur",
+    "query_hi": "उदयपुर से डे ट्रिप",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Kumbhalgarh Fort", "Ranakpur Temple", "Mount Abu"]
+  },
+  {
+    "id": "UDP_SEE_026",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Monsoon Palace Udaipur guide",
+    "query_hi": "मॉनसून पैलेस उदयपुर की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Monsoon Palace", "Sajjangarh", "Sunset view"]
+  },
+  {
+    "id": "UDP_SEE_027",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Jagdish Temple details",
+    "query_hi": "जगदीश मंदिर की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Jagdish Temple", "Hindu temple", "Architecture"]
+  },
+  {
+    "id": "UDP_SEE_028",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Vintage Car Museum Udaipur information",
+    "query_hi": "विंटेज कार म्यूजियम उदयपुर की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Vintage Car Museum", "Classic cars", "Timings"]
+  },
+  {
+    "id": "UDP_SEE_029",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Shilpgram Udaipur guide",
+    "query_hi": "शिल्पग्राम उदयपुर की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Shilpgram", "Craft village", "Handicrafts"]
+  },
+  {
+    "id": "UDP_SEE_030",
+    "city": "Udaipur",
+    "category": "see",
+    "query_en": "Best viewpoints in Udaipur",
+    "query_hi": "उदयपुर के सबसे अच्छे व्यू पॉइंट",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Karni Mata Temple", "Monsoon Palace", "Sunset"]
+  },
+  {
+    "id": "UDP_DO_031",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Boating options in Udaipur",
+    "query_hi": "उदयपुर में बोटिंग की जानकारी",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Lake Pichola", "Fateh Sagar", "Boat ride"]
+  },
+  {
+    "id": "UDP_DO_032",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Photography spots in Udaipur",
+    "query_hi": "उदयपुर में फोटो खींचने की जगहें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["City Palace", "Lake Pichola", "Sunset"]
+  },
+  {
+    "id": "UDP_DO_033",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Romantic things to do in Udaipur",
+    "query_hi": "उदयपुर में कपल्स के लिए क्या करें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Lake view dinner", "Boat ride", "Sunset"]
+  },
+  {
+    "id": "UDP_DO_034",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Adventure activities in Udaipur",
+    "query_hi": "उदयपुर में एडवेंचर एक्टिविटी",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Trekking", "Cycling", "Outdoor activities"]
+  },
+  {
+    "id": "UDP_DO_035",
+    "city": "Udaipur",
+    "category": "do",
+    "query_en": "Best markets in Udaipur",
+    "query_hi": "उदयपुर के सबसे अच्छे बाजार",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Hathi Pol", "Bapu Bazaar", "Souvenirs"]
+  },
+  {
+    "id": "UDP_EAT_036",
+    "city": "Udaipur",
+    "category": "eat",
+    "query_en": "Best street food in Udaipur",
+    "query_hi": "उदयपुर का सबसे अच्छा स्ट्रीट फूड",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Kachori", "Mirchi bada", "Street food"]
+  },
+  {
+    "id": "UDP_EAT_037",
+    "city": "Udaipur",
+    "category": "eat",
+    "query_en": "Vegetarian restaurants in Udaipur",
+    "query_hi": "उदयपुर में शाकाहारी रेस्टोरेंट",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Vegetarian food", "Rajasthani thali", "Family restaurant"]
+  },
+  {
+    "id": "UDP_EAT_038",
+    "city": "Udaipur",
+    "category": "eat",
+    "query_en": "Best rooftop dining in Udaipur",
+    "query_hi": "उदयपुर में रूफटॉप डाइनिंग",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Rooftop restaurant", "Lake view", "Candlelight dinner"]
+  },
+  {
+    "id": "UDP_DRINK_039",
+    "city": "Udaipur",
+    "category": "drink",
+    "query_en": "Best bars in Udaipur",
+    "query_hi": "उदयपुर के सबसे अच्छे बार",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Bar", "Cocktails", "Live music"]
+  },
+  {
+    "id": "UDP_DRINK_040",
+    "city": "Udaipur",
+    "category": "drink",
+    "query_en": "Coffee shops in Udaipur",
+    "query_hi": "उदयपुर में कॉफी शॉप",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Cafe", "Coffee", "Lake view"]
+  },
+  {
+    "id": "UDP_SLEEP_041",
+    "city": "Udaipur",
+    "category": "sleep",
+    "query_en": "Heritage hotels in Udaipur",
+    "query_hi": "उदयपुर के हेरिटेज होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Heritage hotel", "Palace stay", "Royal experience"]
+  },
+  {
+    "id": "UDP_SLEEP_042",
+    "city": "Udaipur",
+    "category": "sleep",
+    "query_en": "Best hostels in Udaipur",
+    "query_hi": "उदयपुर में सबसे अच्छे हॉस्टल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Hostel", "Budget stay", "Backpackers"]
+  },
+  {
+    "id": "UDP_SLEEP_043",
+    "city": "Udaipur",
+    "category": "sleep",
+    "query_en": "Lake view resorts in Udaipur",
+    "query_hi": "उदयपुर में लेक व्यू रिज़ॉर्ट",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Resort", "Lake view", "Luxury stay"]
+  },
+  {
+    "id": "UDP_SAFE_044",
+    "city": "Udaipur",
+    "category": "stay_safe",
+    "query_en": "Emergency numbers in Udaipur",
+    "query_hi": "उदयपुर के इमरजेंसी नंबर",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Police", "Hospital", "Emergency helpline"]
+  },
+  {
+    "id": "UDP_SAFE_045",
+    "city": "Udaipur",
+    "category": "stay_safe",
+    "query_en": "Is Udaipur safe for solo female travelers?",
+    "query_hi": "क्या उदयपुर अकेली महिला यात्रियों के लिए सुरक्षित है?",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Solo travel", "Women safety", "Travel tips"]
+  },
+  {
+    "id": "UDP_NEXT_046",
+    "city": "Udaipur",
+    "category": "go_next",
+    "query_en": "Kumbhalgarh Fort trip from Udaipur",
+    "query_hi": "उदयपुर से कुंभलगढ़ किला यात्रा",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Kumbhalgarh Fort", "Day trip", "UNESCO"]
+  },
+  {
+    "id": "UDP_NEXT_047",
+    "city": "Udaipur",
+    "category": "go_next",
+    "query_en": "Ranakpur Jain Temple visit guide",
+    "query_hi": "रणकपुर जैन मंदिर यात्रा गाइड",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Ranakpur Temple", "Jain temple", "Architecture"]
+  },
+  {
+    "id": "UDP_NEXT_048",
+    "city": "Udaipur",
+    "category": "go_next",
+    "query_en": "Mount Abu from Udaipur travel guide",
+    "query_hi": "उदयपुर से माउंट आबू यात्रा गाइड",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Mount Abu", "Hill station", "Dilwara Temple"]
+  },
+  {
+    "id": "UDP_NEXT_049",
+    "city": "Udaipur",
+    "category": "go_next",
+    "query_en": "Chittorgarh Fort day trip",
+    "query_hi": "चित्तौड़गढ़ किला डे ट्रिप",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Chittorgarh Fort", "Historical site", "Rajasthan"]
+  },
+  {
+    "id": "UDP_NEXT_050",
+    "city": "Udaipur",
+    "category": "go_next",
+    "query_en": "Best weekend destinations from Udaipur",
+    "query_hi": "उदयपुर से वीकेंड डेस्टिनेशन",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Kumbhalgarh", "Mount Abu", "Ranakpur"]
+  },
+  {
+    "id": "MUM_SEE_001",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Best places to visit in Mumbai",
+    "query_hi": "मुंबई में घूमने की सबसे अच्छी जगहें",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Gateway of India", "Marine Drive", "Elephanta Caves"]
+  },
+  {
+    "id": "MUM_SEE_002",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Gateway of India visiting guide",
+    "query_hi": "गेटवे ऑफ इंडिया घूमने की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Gateway of India", "Colaba", "Timings"]
+  },
+  {
+    "id": "MUM_SEE_003",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Marine Drive information",
+    "query_hi": "मरीन ड्राइव की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Marine Drive", "Queen's Necklace", "Sunset"]
+  },
+  {
+    "id": "MUM_SEE_004",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Elephanta Caves travel guide",
+    "query_hi": "एलीफेंटा गुफाएं यात्रा गाइड",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Elephanta Caves", "UNESCO", "Boat ride"]
+  },
+  {
+    "id": "MUM_SEE_005",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Siddhivinayak Temple details",
+    "query_hi": "सिद्धिविनायक मंदिर की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Siddhivinayak Temple", "Hindu temple", "Darshan timings"]
+  },
+  {
+    "id": "MUM_DO_006",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Things to do in Mumbai at night",
+    "query_hi": "मुंबई में रात में क्या करें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Marine Drive", "Nightlife", "Clubs"]
+  },
+  {
+    "id": "MUM_DO_007",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Bollywood tour in Mumbai",
+    "query_hi": "मुंबई में बॉलीवुड टूर",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Film City", "Bollywood", "Studio tour"]
+  },
+  {
+    "id": "MUM_DO_008",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Shopping in Mumbai",
+    "query_hi": "मुंबई में शॉपिंग कहाँ करें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Colaba Causeway", "Linking Road", "Fashion Street"]
+  },
+  {
+    "id": "MUM_DO_009",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Best beaches in Mumbai",
+    "query_hi": "मुंबई के सबसे अच्छे समुद्र तट",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Juhu Beach", "Girgaum Chowpatty", "Versova Beach"]
+  },
+  {
+    "id": "MUM_DO_010",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Romantic places in Mumbai",
+    "query_hi": "मुंबई में रोमांटिक जगहें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Marine Drive", "Bandra Fort", "Sunset"]
+  },
+
+  {
+    "id": "MUM_EAT_011",
+    "city": "Mumbai",
+    "category": "eat",
+    "query_en": "Famous street food in Mumbai",
+    "query_hi": "मुंबई का प्रसिद्ध स्ट्रीट फूड",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Vada Pav", "Pav Bhaji", "Bhel Puri"]
+  },
+  {
+    "id": "MUM_EAT_012",
+    "city": "Mumbai",
+    "category": "eat",
+    "query_en": "Best restaurants in Mumbai",
+    "query_hi": "मुंबई के सबसे अच्छे रेस्टोरेंट",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Seafood", "Fine dining", "Local cuisine"]
+  },
+  {
+    "id": "MUM_EAT_013",
+    "city": "Mumbai",
+    "category": "eat",
+    "query_en": "Best seafood in Mumbai",
+    "query_hi": "मुंबई में सबसे अच्छा सीफूड",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Bombil fry", "Prawn curry", "Seafood restaurant"]
+  },
+  {
+    "id": "MUM_DRINK_014",
+    "city": "Mumbai",
+    "category": "drink",
+    "query_en": "Best pubs in Mumbai",
+    "query_hi": "मुंबई के सबसे अच्छे पब",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Bandra", "Lower Parel", "Nightlife"]
+  },
+  {
+    "id": "MUM_DRINK_015",
+    "city": "Mumbai",
+    "category": "drink",
+    "query_en": "Rooftop bars in Mumbai",
+    "query_hi": "मुंबई के रूफटॉप बार",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Rooftop", "Cocktails", "City view"]
+  },
+
+  {
+    "id": "MUM_SLEEP_016",
+    "city": "Mumbai",
+    "category": "sleep",
+    "query_en": "Luxury hotels in Mumbai",
+    "query_hi": "मुंबई के लक्ज़री होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["5 star hotel", "Sea view", "South Mumbai"]
+  },
+  {
+    "id": "MUM_SLEEP_017",
+    "city": "Mumbai",
+    "category": "sleep",
+    "query_en": "Budget hotels in Mumbai",
+    "query_hi": "मुंबई में सस्ते होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Budget stay", "Hostel", "Guesthouse"]
+  },
+  {
+    "id": "MUM_SLEEP_018",
+    "city": "Mumbai",
+    "category": "sleep",
+    "query_en": "Best areas to stay in Mumbai",
+    "query_hi": "मुंबई में रहने के लिए सबसे अच्छे इलाके",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Colaba", "Bandra", "Andheri"]
+  },
+  {
+    "id": "MUM_SAFE_019",
+    "city": "Mumbai",
+    "category": "stay_safe",
+    "query_en": "Is Mumbai safe for tourists?",
+    "query_hi": "क्या मुंबई पर्यटकों के लिए सुरक्षित है?",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Tourist safety", "Police helpline", "Safe areas"]
+  },
+  {
+    "id": "MUM_SAFE_020",
+    "city": "Mumbai",
+    "category": "stay_safe",
+    "query_en": "Safety tips for solo female travelers in Mumbai",
+    "query_hi": "मुंबई में अकेली महिला यात्रियों के लिए सुरक्षा सुझाव",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Women safety", "Public transport", "Emergency numbers"]
+  },
+
+  {
+    "id": "MUM_NEXT_021",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Weekend trips from Mumbai",
+    "query_hi": "मुंबई से वीकेंड ट्रिप",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Lonavala", "Alibaug", "Mahabaleshwar"]
+  },
+  {
+    "id": "MUM_NEXT_022",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Lonavala trip from Mumbai",
+    "query_hi": "मुंबई से लोनावला यात्रा",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Lonavala", "Hill station", "Tiger Point"]
+  },
+  {
+    "id": "MUM_NEXT_023",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Alibaug travel guide",
+    "query_hi": "अलीबाग यात्रा गाइड",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Alibaug beach", "Ferry", "Weekend trip"]
+  },
+  {
+    "id": "MUM_SEE_024",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Haji Ali Dargah information",
+    "query_hi": "हाजी अली दरगाह की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Haji Ali", "Dargah", "Arabian Sea"]
+  },
+  {
+    "id": "MUM_SEE_025",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Chhatrapati Shivaji Maharaj Terminus guide",
+    "query_hi": "छत्रपति शिवाजी महाराज टर्मिनस की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["CST", "UNESCO", "Railway station"]
+  },
+
+  {
+    "id": "MUM_SEE_026",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Bandra Fort details",
+    "query_hi": "बांद्रा किला की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Bandra Fort", "Sea view", "Photography"]
+  },
+  {
+    "id": "MUM_SEE_027",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Juhu Beach guide",
+    "query_hi": "जुहू बीच की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Juhu Beach", "Sunset", "Street food"]
+  },
+  {
+    "id": "MUM_DO_028",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Water sports near Mumbai",
+    "query_hi": "मुंबई के पास वाटर स्पोर्ट्स",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Alibaug", "Jet ski", "Parasailing"]
+  },
+  {
+    "id": "MUM_DO_029",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Best photography spots in Mumbai",
+    "query_hi": "मुंबई में फोटो खींचने की जगहें",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Marine Drive", "Gateway of India", "Bandra"]
+  },
+  {
+    "id": "MUM_EAT_030",
+    "city": "Mumbai",
+    "category": "eat",
+    "query_en": "Best places for Vada Pav in Mumbai",
+    "query_hi": "मुंबई में वड़ा पाव खाने की सबसे अच्छी जगह",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Vada Pav", "Street food", "Local favorite"]
+  },
+
+  {
+    "id": "MUM_EAT_031",
+    "city": "Mumbai",
+    "category": "eat",
+    "query_en": "Vegetarian restaurants in Mumbai",
+    "query_hi": "मुंबई में शाकाहारी रेस्टोरेंट",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Vegetarian food", "Thali", "Family restaurant"]
+  },
+  {
+    "id": "MUM_DRINK_032",
+    "city": "Mumbai",
+    "category": "drink",
+    "query_en": "Best cafes in Mumbai",
+    "query_hi": "मुंबई के सबसे अच्छे कैफे",
+    "expected_sections": ["Drink"],
+    "expected_keywords": ["Cafe", "Coffee", "Bandra"]
+  },
+  {
+    "id": "MUM_SLEEP_033",
+    "city": "Mumbai",
+    "category": "sleep",
+    "query_en": "Sea view hotels in Mumbai",
+    "query_hi": "मुंबई में सी व्यू होटल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Sea view", "Marine Drive", "Luxury stay"]
+  },
+  {
+    "id": "MUM_SAFE_034",
+    "city": "Mumbai",
+    "category": "stay_safe",
+    "query_en": "Emergency numbers in Mumbai",
+    "query_hi": "मुंबई के इमरजेंसी नंबर",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Police", "Hospital", "Emergency helpline"]
+  },
+  {
+    "id": "MUM_NEXT_035",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Mahabaleshwar trip from Mumbai",
+    "query_hi": "मुंबई से महाबलेश्वर यात्रा",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Mahabaleshwar", "Hill station", "Strawberry farms"]
+  },
+
+  {
+    "id": "MUM_DO_036",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Mumbai local train travel guide",
+    "query_hi": "मुंबई लोकल ट्रेन यात्रा गाइड",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Local train", "Peak hours", "Travel tips"]
+  },
+  {
+    "id": "MUM_DO_037",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Dharavi slum tour information",
+    "query_hi": "धारावी स्लम टूर की जानकारी",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Dharavi", "Guided tour", "Local life"]
+  },
+  {
+    "id": "MUM_SEE_038",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Sanjay Gandhi National Park guide",
+    "query_hi": "संजय गांधी नेशनल पार्क की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["National park", "Kanheri Caves", "Safari"]
+  },
+  {
+    "id": "MUM_SEE_039",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Kanheri Caves details",
+    "query_hi": "कान्हेरी गुफाएं की जानकारी",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Kanheri Caves", "Buddhist caves", "National park"]
+  },
+  {
+    "id": "MUM_NEXT_040",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Nashik trip from Mumbai",
+    "query_hi": "मुंबई से नासिक यात्रा",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Nashik", "Wine tours", "Temple town"]
+  },
+  {
+    "id": "MUM_NEXT_041",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Matheran hill station guide",
+    "query_hi": "माथेरान हिल स्टेशन गाइड",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Matheran", "Toy train", "Hill station"]
+  },
+  {
+    "id": "MUM_DO_042",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Best sunset points in Mumbai",
+    "query_hi": "मुंबई में सबसे अच्छे सनसेट पॉइंट",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Marine Drive", "Bandra Fort", "Juhu Beach"]
+  },
+  {
+    "id": "MUM_EAT_043",
+    "city": "Mumbai",
+    "category": "eat",
+    "query_en": "Best Irani cafes in Mumbai",
+    "query_hi": "मुंबई के सबसे अच्छे ईरानी कैफे",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Irani cafe", "Bun maska", "South Mumbai"]
+  },
+  {
+    "id": "MUM_SLEEP_044",
+    "city": "Mumbai",
+    "category": "sleep",
+    "query_en": "Best hostels in Mumbai",
+    "query_hi": "मुंबई में सबसे अच्छे हॉस्टल",
+    "expected_sections": ["Sleep"],
+    "expected_keywords": ["Hostel", "Backpackers", "Budget stay"]
+  },
+  {
+    "id": "MUM_SAFE_045",
+    "city": "Mumbai",
+    "category": "stay_safe",
+    "query_en": "Common scams in Mumbai",
+    "query_hi": "मुंबई में आम धोखाधड़ी",
+    "expected_sections": ["Stay safe"],
+    "expected_keywords": ["Taxi scam", "Tourist scam", "Safety tips"]
+  },
+  {
+    "id": "MUM_NEXT_046",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Karjat trip from Mumbai",
+    "query_hi": "मुंबई से करजत यात्रा",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Karjat", "Trekking", "Weekend trip"]
+  },
+  {
+    "id": "MUM_NEXT_047",
+    "city": "Mumbai",
+    "category": "go_next",
+    "query_en": "Igatpuri travel guide",
+    "query_hi": "इगतपुरी यात्रा गाइड",
+    "expected_sections": ["Go next"],
+    "expected_keywords": ["Igatpuri", "Hill station", "Vipassana center"]
+  },
+  {
+    "id": "MUM_DO_048",
+    "city": "Mumbai",
+    "category": "do",
+    "query_en": "Mumbai heritage walk guide",
+    "query_hi": "मुंबई हेरिटेज वॉक गाइड",
+    "expected_sections": ["Do"],
+    "expected_keywords": ["Fort area", "Colonial buildings", "Walking tour"]
+  },
+  {
+    "id": "MUM_EAT_049",
+    "city": "Mumbai",
+    "category": "eat",
+    "query_en": "Best Pav Bhaji in Mumbai",
+    "query_hi": "मुंबई में सबसे अच्छी पाव भाजी",
+    "expected_sections": ["Eat"],
+    "expected_keywords": ["Pav Bhaji", "Street food", "Local favorite"]
+  },
+  {
+    "id": "MUM_SEE_050",
+    "city": "Mumbai",
+    "category": "see",
+    "query_en": "Colaba Causeway market guide",
+    "query_hi": "कोलाबा कॉजवे मार्केट गाइड",
+    "expected_sections": ["See"],
+    "expected_keywords": ["Colaba Causeway", "Shopping", "Souvenirs"]
+  }
+]

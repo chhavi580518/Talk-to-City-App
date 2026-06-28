@@ -1,0 +1,84 @@
+{
+  "_comment": "Query expansion rules for TalkToCity RAG pipeline.",
+  "_format": "Each rule has 'patterns' (regex list, word-boundary matched) and 'expansion' (appended to query).",
+  "_note": "Add Hindi patterns alongside English for bilingual query support.",
+
+  "rules": [
+    {
+      "name": "food",
+      "patterns": [
+        "\\bfood\\b", "\\beat\\b", "\\bdine\\b", "\\bcuisine\\b",
+        "\\brestaurant\\b", "\\bstreet food\\b", "\\bsnack\\b",
+        "खाना", "भोजन", "खाने", "रेस्तरां", "स्ट्रीट फूड"
+      ],
+      "expansion": "food places street food restaurants eat famous dishes local cuisine खाना भोजन"
+    },
+    {
+      "name": "accommodation",
+      "patterns": [
+        "\\bhotel\\b", "\\bstay\\b", "\\baccommodation\\b",
+        "\\bhostel\\b", "\\bguesthouse\\b", "\\blodge\\b",
+        "होटल", "रहना", "ठहरना", "आवास"
+      ],
+      "expansion": "stay hotels accommodation budget luxury guesthouse hostel होटल आवास"
+    },
+    {
+      "name": "shopping",
+      "patterns": [
+        "\\bshopping\\b", "\\bbuy\\b", "\\bmarket\\b",
+        "\\bbazaar\\b", "\\bsouvenir\\b", "\\bcraft\\b",
+        "बाज़ार", "खरीदारी", "खरीदना", "हस्तशिल्प"
+      ],
+      "expansion": "shopping markets things to buy bazaars souvenirs crafts बाज़ार खरीदारी"
+    },
+    {
+      "name": "sightseeing",
+      "patterns": [
+        "\\bvisit\\b", "\\bplaces\\b", "\\bsee\\b",
+        "\\battractions\\b", "\\bitinerary\\b", "\\btourist\\b",
+        "\\bsightseeing\\b", "\\blandmark\\b",
+        "घूमना", "दर्शनीय", "यात्रा", "पर्यटन", "स्थल"
+      ],
+      "expansion": "tourist attractions sightseeing landmarks places to visit heritage घूमना दर्शनीय स्थल"
+    },
+    {
+      "name": "transport",
+      "patterns": [
+        "\\bget in\\b", "\\bget around\\b", "\\btransport\\b",
+        "\\btrain\\b", "\\bbus\\b", "\\bflight\\b", "\\bauto\\b",
+        "\\bmetro\\b", "\\btaxi\\b",
+        "ट्रेन", "बस", "मेट्रो", "परिवहन", "कैसे पहुँचें"
+      ],
+      "expansion": "transport getting around train bus metro taxi auto rickshaw how to reach परिवहन"
+    },
+    {
+      "name": "history",
+      "patterns": [
+        "\\bhistory\\b", "\\bheritage\\b", "\\bhistorical\\b",
+        "\\bancient\\b", "\\bfort\\b", "\\bpalace\\b", "\\btemple\\b",
+        "\\bmonument\\b", "\\bruins\\b",
+        "इतिहास", "किला", "महल", "मंदिर", "ऐतिहासिक"
+      ],
+      "expansion": "history heritage fort palace temple monument ruins historical sites इतिहास ऐतिहासिक"
+    },
+    {
+      "name": "budget",
+      "patterns": [
+        "\\bcheap\\b", "\\bbudget\\b", "\\baffordable\\b",
+        "\\binexpensive\\b", "\\bfree\\b", "\\bcost\\b", "\\bprice\\b",
+        "सस्ता", "बजट", "किफ़ायती", "मुफ़्त"
+      ],
+      "expansion": "budget cheap affordable free cost price entry fee सस्ता बजट किफ़ायती"
+    },
+    {
+      "name": "weather",
+      "patterns": [
+        "\\bweather\\b", "\\bclimate\\b", "\\bseason\\b",
+        "\\bwinter\\b", "\\bsummer\\b", "\\bmonsoon\\b",
+        "\\bbest time\\b", "\\bwhen to visit\\b",
+        "मौसम", "जलवायु", "सर्दी", "गर्मी", "बरसात"
+      ],
+      "expansion": "weather climate best time to visit season temperature monsoon winter summer मौसम जलवायु"
+    }
+  ]
+}

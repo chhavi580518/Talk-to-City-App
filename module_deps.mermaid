@@ -1,0 +1,31 @@
+graph TD
+    RC["rag_core.py\nembeddings · vector store\nGemini API · query expansion\ncontext builder"]
+
+    EN["pipeline_en.py\nEnglish prompt\nk=4 chunks"]
+    HI["pipeline_hi.py\nHindi prompt\nk=5 chunks\ntransliteration"]
+    ING["ingest.py\nload chunks\nsmart upsert"]
+    DBG["search_debug.py\nraw retrieval\nno LLM"]
+    EVL["eval.py\nkeyword hit rate\nsection hit rate"]
+
+    API["api.py\nFastAPI server\nPOST /api/search\nGET /health"]
+
+    RC --> EN
+    RC --> HI
+    RC --> ING
+    RC --> DBG
+    RC --> EVL
+
+    EN --> API
+    HI --> API
+
+    EXP["expansion_rules.json\n(runtime config)"]
+    EXP -.->|"loaded at startup"| RC
+
+    style RC fill:#1B2A4A,stroke:#00A3C4,color:#fff
+    style API fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style EN fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style HI fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style ING fill:#374151,stroke:#79e7ff,color:#fff
+    style DBG fill:#374151,stroke:#79e7ff,color:#fff
+    style EVL fill:#374151,stroke:#79e7ff,color:#fff
+    style EXP fill:#4A3728,stroke:#ffa07a,color:#fff

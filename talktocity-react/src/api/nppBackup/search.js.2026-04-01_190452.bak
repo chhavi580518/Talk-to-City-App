@@ -1,0 +1,39 @@
+import { getToken } from './auth'
+
+export class AuthError extends Error {
+  constructor(msg) { 
+    super(msg); 
+    this.name = 'AuthError'; 
+  }
+}
+
+export async function searchCity({ question, city, lang = 'en' }) {
+  const token = getToken();
+  const headers = { 'Content-Type': 'application/json' };
+
+  // Attach token only if the user is logged in
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 120000);
+
+  try {
+    const res = await fetch('/api/search', {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ question, city: city || null, lang }),
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+
+    if (res.status === 401) throw new Error('Session expired. Please sign in again.');
+    if (!res.ok) throw new Error(`Backend error ${res.status}`);
+    
+    return res.json();
+  } catch (err) {
+    clearTimeout(timer);
+    throw err;
+  }
+}

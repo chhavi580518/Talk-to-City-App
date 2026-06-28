@@ -1,0 +1,34 @@
+flowchart TD
+    CMD["./run.sh setup"]
+
+    subgraph host["On Host Machine"]
+        RECHUNK["rechunk.py\nmerges small chunks\nwrites *_chunks_large.json"]
+    end
+
+    subgraph containers["Container Operations"]
+        POD["Create Podman Pod\n+ network + volume"]
+        DBSTART["Start PostgreSQL\n+ pgvector extension"]
+        BEBUILD["Build backend image\nCOPY . . bakes chunks in"]
+        BESTART["Start FastAPI\ncontainer"]
+        FEBUILD["Build frontend image\nnpm run build → nginx"]
+        FESTART["Start Nginx\ncontainer"]
+        INGEST["python ingest.py\nload chunks into PGVector"]
+    end
+
+    READY["✓ Stack running\nlocalhost:5173"]
+
+    CMD --> RECHUNK
+    RECHUNK --> POD
+    POD --> DBSTART
+    DBSTART --> BEBUILD
+    BEBUILD --> BESTART
+    BESTART --> FEBUILD
+    FEBUILD --> FESTART
+    FESTART --> INGEST
+    INGEST --> READY
+
+    style CMD fill:#1B2A4A,stroke:#79e7ff,color:#fff
+    style host fill:#1B2A4A,stroke:#79e7ff
+    style containers fill:#0D1B2A,stroke:#79e7ff
+    style RECHUNK fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style READY fill:#1A5E20,stroke:#00A3C4,color:#fff

@@ -1,0 +1,29 @@
+flowchart TD
+    Q["User Question\n+ city + lang"]
+    EXP["Query Expansion\nexpansion_rules.json\n+synonyms EN+HI"]
+    EMB["Embedding\nall-MiniLM-L6-v2\n384-dim vector"]
+    VS["Vector Search\nPGVector similarity\nfilter: city, top-k"]
+    CTX["Build Context\n[SOURCE 1] chunk_id...\n[SOURCE 2] ..."]
+    LLM["Google Gemini API\ngrounded prompt\nmax 2048 tokens"]
+    PARSE["Parse Response\nsplit answer + sources\nfilter placeholders"]
+    ANS["Answer + Sources\nreturned to UI"]
+
+    Q --> EXP
+    EXP --> EMB
+    EMB --> VS
+    VS --> CTX
+    CTX --> LLM
+    LLM --> PARSE
+    PARSE --> ANS
+
+    VS -->|"no results"| NORES["'Information not\navailable'"]
+
+    style Q fill:#1B2A4A,stroke:#79e7ff,color:#fff
+    style EXP fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style EMB fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style VS fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style CTX fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style LLM fill:#0F9D58,stroke:#79e7ff,color:#fff
+    style PARSE fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style ANS fill:#1B2A4A,stroke:#00A3C4,color:#fff
+    style NORES fill:#7B2D2D,stroke:#ff7979,color:#fff

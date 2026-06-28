@@ -1,0 +1,183 @@
+import React, { useState, useCallback } from 'react'
+import Topbar from '../components/Topbar'
+import { searchCity } from '../api/search'
+import styles from './SearchPage.module.css'
+
+const CHIPS = [
+  { label: 'Delhi food streets',      question: 'Best food streets in Delhi',    city: 'Delhi'   },
+  { label: 'Udaipur 1-day itinerary', question: '1-day itinerary for Udaipur',   city: 'Udaipur' },
+  { label: 'Mumbai cafés',            question: 'Best cafés in Mumbai',           city: 'Mumbai'  },
+  { label: 'Best heritage places',    question: 'Best heritage places to visit',  city: ''        },
+]
+
+const CITIES = ['Udaipur', 'Delhi', 'Mumbai']
+
+export default function SearchPage({ onNavigate }) {
+  const [question, setQuestion] = useState('')
+  const [city, setCity]         = useState('Udaipur')
+  const [lang, setLang]         = useState('en')
+  const [loading, setLoading]   = useState(false)
+  const [result, setResult]     = useState(null)  // { answer, sources }
+  const [error, setError]       = useState(null)
+
+  // ── Core search function ─────────────────────────────────────────────────
+  // Accepts explicit values so it can be called from chips (state updates
+  // are async — reading state immediately after setState is unreliable)
+
+  const runSearch = useCallback(async (q, selectedCity, selectedLang) => {
+    if (!q.trim()) return
+
+    setLoading(true)
+    setError(null)
+    setResult(null)
+
+    try {
+      const data = await searchCity({
+        question: q.trim(),
+        city: selectedCity,
+        lang: selectedLang,
+      })
+      setResult(data)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }, [])
+
+  // ── Handlers ─────────────────────────────────────────────────────────────
+
+  function handleSearch() {
+    runSearch(question, city, lang)
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') handleSearch()
+  }
+
+  // Bug #8 fix: chip click now immediately triggers search with chip values
+  function handleChip(chip) {
+    const chipCity = chip.city || city
+    setQuestion(chip.question)
+    if (chip.city) setCity(chip.city)
+    // Pass values directly — don't rely on state having updated yet
+    runSearch(chip.question, chipCity, lang)
+  }
+
+  // Bug #10 fix: switching language clears stale result
+  function handleLang(newLang) {
+    setLang(newLang)
+    setResult(null)
+    setError(null)
+  }
+
+  // ── Render ───────────────────────────────────────────────────────────────
+
+  const isSearchDisabled = loading || !question.trim() // Bug #9 fix
+
+  return (
+    <section className={styles.frame}>
+      <Topbar activeView="search" onNavigate={onNavigate} />
+
+      <div className={styles.shell}>
+        <div className={styles.panel}>
+          <h1 className={styles.title}>Search Your City</h1>
+          <p className={styles.subtitle}>
+            Ask for cafés, tourist places, itineraries, food streets, heritage spots,
+            or city-specific travel guidance — powered by local RAG data.
+          </p>
+
+          {/* Language toggle */}
+          <div className={styles.langToggle}>
+            <button
+              className={lang === 'en' ? styles.langActive : styles.langBtn}
+              onClick={() => handleLang('en')}
+            >EN</button>
+            <button
+              className={lang === 'hi' ? styles.langActive : styles.langBtn}
+              onClick={() => handleLang('hi')}
+            >हि</button>
+          </div>
+
+          {/* Search bar */}
+          <div className={styles.searchWrap}>
+            <input
+              type="text"
+              placeholder="Ask anything about your city… best cafés, top places, food, stays"
+              value={question}
+              onChange={e => setQuestion(e.target.value)}
+              onKeyDown={handleKeyDown}
+              disabled={loading}
+            />
+            <select
+              value={city}
+              onChange={e => setCity(e.target.value)}
+              disabled={loading}
+            >
+              {CITIES.map(c => <option key={c}>{c}</option>)}
+            </select>
+            {/* Bug #9 fix: disabled when empty or loading */}
+            <button onClick={handleSearch} disabled={isSearchDisabled}>
+              {loading ? '…' : 'Search'}
+            </button>
+          </div>
+
+          {/* Trending chips */}
+          <div className={styles.trending}>
+            {CHIPS.map(chip => (
+              <span
+                key={chip.label}
+                className={`${styles.chip} ${loading ? styles.chipDisabled : ''}`}
+                onClick={() => !loading && handleChip(chip)}
+              >
+                {chip.label}
+              </span>
+            ))}
+          </div>
+
+          {/* Skeleton loader */}
+          {loading && (
+            <div className={styles.resultBox}>
+              <div className={styles.skeleton} />
+              <div className={styles.skeleton} style={{ width: '70%' }} />
+              <div className={styles.skeleton} style={{ width: '85%' }} />
+              <p className={styles.loadingHint}>
+                Asking Ollama… this may take up to 2 minutes on CPU.
+              </p>
+            </div>
+          )}
+
+          {/* Error */}
+          {error && !loading && (
+            <div className={`${styles.resultBox} ${styles.error}`}>
+              <strong>Error:</strong> {error}
+              <p className={styles.errorHint}>
+                Make sure the backend is running on <code>localhost:8000</code> and
+                Ollama is running with <code>OLLAMA_HOST=0.0.0.0</code>.
+              </p>
+            </div>
+          )}
+
+          {/* Result */}
+          {result && !loading && (
+            <div className={styles.resultBox}>
+              <p className={styles.answerText}>{result.answer}</p>
+              {result.sources?.length > 0 && (
+                <div className={styles.sources}>
+                  <span className={styles.sourcesLabel}>Sources</span>
+                  {result.sources.map(s => (
+                    <span key={s} className={styles.sourceChip}>{s}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          <a className={styles.backLink} onClick={() => onNavigate('home')}>
+            ← Back to city carousel
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}

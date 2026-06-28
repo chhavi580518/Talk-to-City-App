@@ -1,0 +1,184 @@
+import React, { useState, useCallback, useEffect } from 'react'
+import Topbar from '../components/Topbar'
+import { searchCity, AuthError } from '../api/search'
+import { getRecommendations } from '../api/recommendations'
+import styles from './SearchPage.module.css'
+
+const DEFAULT_CHIPS = [
+  { label: 'Delhi food streets',      question: 'Best food streets in Delhi',   city: 'Delhi'   },
+  { label: 'Udaipur 1-day itinerary', question: '1-day itinerary for Udaipur',  city: 'Udaipur' },
+  { label: 'Mumbai cafés',            question: 'Best cafés in Mumbai',          city: 'Mumbai'  },
+  { label: 'Best heritage places',    question: 'Best heritage places to visit', city: ''        },
+]
+
+const CITIES = ['Udaipur', 'Delhi', 'Mumbai']
+
+// Confidence badge component
+function RetrievalBadge({ score, count }) {
+  if (score === undefined || score === null) return null
+  const pct   = Math.round(score * 100)
+  const label = pct >= 80 ? 'High confidence' : pct >= 50 ? 'Medium confidence' : 'Low confidence'
+  const color = pct >= 80 ? '#4ade80' : pct >= 50 ? '#fbbf24' : '#f87171'
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+      <div style={{ width: 10, height: 10, borderRadius: '50%', background: color, boxShadow: `0 0 6px ${color}` }} />
+      <span style={{ fontSize: '0.8rem', color, fontWeight: 600 }}>{label}</span>
+      <span style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.4)' }}>
+        {pct}% match · {count} chunk{count !== 1 ? 's' : ''} retrieved
+      </span>
+    </div>
+  )
+}
+
+export default function SearchPage({ onNavigate, user, onLogout, rerunQuery, onRerunConsumed }) {
+  const [question, setQuestion] = useState('')
+  const [city, setCity]         = useState('Udaipur')
+  const [lang, setLang]         = useState('en')
+  const [loading, setLoading]   = useState(false)
+  const [result, setResult]     = useState(null)
+  const [error, setError]       = useState(null)
+  const [chips, setChips]           = useState(DEFAULT_CHIPS)
+  const [chipsLabel, setChipsLabel] = useState('Trending')
+
+  // Redirect to login if not authenticated; load recommendations
+  useEffect(() => {
+    if (!user) { onNavigate('auth'); return }
+    loadRecommendations()
+  }, [user, onNavigate])
+
+  async function loadRecommendations() {
+    try {
+      const data = await getRecommendations()
+      if (data.recommendations?.length > 0) {
+        setChips(data.recommendations)
+        setChipsLabel('For you')
+      }
+    } catch {
+      // no history yet — keep default trending chips
+    }
+  }
+
+  // Handle rerun from history page
+  useEffect(() => {
+    if (rerunQuery) {
+      setQuestion(rerunQuery.question)
+      setCity(rerunQuery.city || 'Udaipur')
+      setLang(rerunQuery.lang || 'en')
+      runSearch(rerunQuery.question, rerunQuery.city || 'Udaipur', rerunQuery.lang || 'en')
+      onRerunConsumed()
+    }
+  }, [rerunQuery])
+
+  const runSearch = useCallback(async (q, selectedCity, selectedLang) => {
+    if (!q.trim()) return
+    setLoading(true); setError(null); setResult(null)
+    try {
+      const data = await searchCity({ question: q.trim(), city: selectedCity, lang: selectedLang })
+      setResult(data)
+      loadRecommendations()  // refresh chips after each search
+    } catch (err) {
+      if (err instanceof AuthError) { onNavigate('auth'); return }
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }, [onNavigate])
+
+  function handleSearch() { runSearch(question, city, lang) }
+  function handleKeyDown(e) { if (e.key === 'Enter') handleSearch() }
+
+  function handleChip(chip) {
+    const chipCity = chip.city || city
+    setQuestion(chip.question)
+    if (chip.city) setCity(chip.city)
+    runSearch(chip.question, chipCity, lang)
+  }
+
+  function handleLang(newLang) { setLang(newLang); setResult(null); setError(null) }
+
+  if (!user) return null
+
+  return (
+    <section className={styles.frame}>
+      <Topbar activeView="search" onNavigate={onNavigate} user={user} onLogout={onLogout} />
+      <div className={styles.shell}>
+        <div className={styles.panel}>
+          <h1 className={styles.title}>Search Your City</h1>
+          <p className={styles.subtitle}>
+            Ask for cafés, tourist places, itineraries, food streets, heritage spots,
+            or city-specific travel guidance — powered by local RAG data.
+          </p>
+
+          <div className={styles.langToggle}>
+            <button className={lang === 'en' ? styles.langActive : styles.langBtn} onClick={() => handleLang('en')}>EN</button>
+            <button className={lang === 'hi' ? styles.langActive : styles.langBtn} onClick={() => handleLang('hi')}>हि</button>
+          </div>
+
+          <div className={styles.searchWrap}>
+            <input
+              type="text"
+              placeholder="Ask anything about your city…"
+              value={question}
+              onChange={e => setQuestion(e.target.value)}
+              onKeyDown={handleKeyDown}
+              disabled={loading}
+            />
+            <select value={city} onChange={e => setCity(e.target.value)} disabled={loading}>
+              {CITIES.map(c => <option key={c}>{c}</option>)}
+            </select>
+            <button onClick={handleSearch} disabled={loading || !question.trim()}>
+              {loading ? '…' : 'Search'}
+            </button>
+          </div>
+
+          <div className={styles.trendingSection}>
+            <span className={styles.trendingLabel}>{chipsLabel}</span>
+            <div className={styles.trending}>
+              {chips.map((chip, i) => (
+                <span key={i}
+                  className={`${styles.chip} ${loading ? styles.chipDisabled : ''}`}
+                  onClick={() => !loading && handleChip(chip)}>
+                  {chip.label || chip.question}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {loading && (
+            <div className={styles.resultBox}>
+              <div className={styles.skeleton} />
+              <div className={styles.skeleton} style={{ width: '70%' }} />
+              <div className={styles.skeleton} style={{ width: '85%' }} />
+              <p className={styles.loadingHint}>Asking Gemini… this may take up to 30 seconds.</p>
+            </div>
+          )}
+
+          {error && !loading && (
+            <div className={`${styles.resultBox} ${styles.error}`}>
+              <strong>Error:</strong> {error}
+              <p className={styles.errorHint}>Make sure the backend is running on <code>localhost:8000</code>.</p>
+            </div>
+          )}
+
+          {result && !loading && (
+            <div className={styles.resultBox}>
+              <RetrievalBadge score={result.retrieval_score} count={result.chunk_count} />
+              <p className={styles.answerText}>{result.answer}</p>
+              {result.sources?.length > 0 && (
+                <div className={styles.sources}>
+                  <span className={styles.sourcesLabel}>Sources</span>
+                  {result.sources.map(s => <span key={s} className={styles.sourceChip}>{s}</span>)}
+                </div>
+              )}
+              <button className={styles.historyLink} onClick={() => onNavigate('history')}>
+                View search history →
+              </button>
+            </div>
+          )}
+
+          <a className={styles.backLink} onClick={() => onNavigate('home')}>← Back to city carousel</a>
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,157 @@
+{
+  "rules": [
+    {
+      "name": "itinerary",
+      "patterns": [
+        "\\bitinerary\\b",
+        "\\b1[- ]day\\b",
+        "\\bone[- ]day\\b",
+        "\\bday plan\\b",
+        "\\btravel plan\\b",
+        "\\bthings to do\\b",
+        "\\bplaces to visit\\b",
+        "यात्रा योजना",
+        "एक दिन",
+        "1 दिन",
+        "दिन का प्लान",
+        "घूमने की जगहें",
+        "क्या देखें"
+      ],
+      "expansion": "one day itinerary day plan morning afternoon evening places to visit sightseeing route must see things to do यात्रा योजना सुबह दोपहर शाम घूमने की जगहें"
+    },
+    {
+      "name": "food",
+      "patterns": [
+        "\\bfood\\b",
+        "\\beat\\b",
+        "\\bdine\\b",
+        "\\bcuisine\\b",
+        "\\brestaurant\\b",
+        "\\brestaurants\\b",
+        "\\bstreet food\\b",
+        "\\bsnack\\b",
+        "\\bthali\\b",
+        "\\bcafe\\b",
+        "\\bcafes\\b",
+        "खाना",
+        "भोजन",
+        "खाने",
+        "रेस्तरां",
+        "स्ट्रीट फूड",
+        "थाली",
+        "कैफे"
+      ],
+      "expansion": "food places street food restaurants cafes famous dishes local cuisine thali snacks rooftop dining खाना भोजन कैफे"
+    },
+    {
+      "name": "sightseeing",
+      "patterns": [
+        "\\bvisit\\b",
+        "\\bplaces\\b",
+        "\\bsee\\b",
+        "\\battractions\\b",
+        "\\btourist\\b",
+        "\\bsightseeing\\b",
+        "\\blandmark\\b",
+        "\\bheritage\\b",
+        "\\bmonument\\b",
+        "\\bpalace\\b",
+        "\\bfort\\b",
+        "\\btemple\\b",
+        "\\blake\\b",
+        "घूमना",
+        "दर्शनीय",
+        "पर्यटन",
+        "स्थल",
+        "धरोहर",
+        "किला",
+        "महल",
+        "मंदिर",
+        "झील"
+      ],
+      "expansion": "tourist attractions sightseeing landmarks places to visit heritage monument palace fort temple lake city highlights दर्शनीय स्थल धरोहर"
+    },
+    {
+      "name": "transport",
+      "patterns": [
+        "\\bget in\\b",
+        "\\bget around\\b",
+        "\\btransport\\b",
+        "\\btrain\\b",
+        "\\bbus\\b",
+        "\\bflight\\b",
+        "\\bauto\\b",
+        "\\bmetro\\b",
+        "\\btaxi\\b",
+        "\\bhow to reach\\b",
+        "\\bairport\\b",
+        "ट्रेन",
+        "बस",
+        "मेट्रो",
+        "परिवहन",
+        "कैसे पहुँचें",
+        "कैब",
+        "ऑटो",
+        "हवाई अड्डा"
+      ],
+      "expansion": "transport getting around train bus metro taxi auto rickshaw airport how to reach local travel परिवहन कैसे पहुँचें"
+    },
+    {
+      "name": "shopping",
+      "patterns": [
+        "\\bshopping\\b",
+        "\\bbuy\\b",
+        "\\bmarket\\b",
+        "\\bbazaar\\b",
+        "\\bsouvenir\\b",
+        "\\bcraft\\b",
+        "\\bhandicraft\\b",
+        "\\bmall\\b",
+        "बाज़ार",
+        "खरीदारी",
+        "खरीदना",
+        "हस्तशिल्प",
+        "मॉल"
+      ],
+      "expansion": "shopping markets bazaars things to buy souvenirs handicrafts crafts mall खरीदारी बाज़ार हस्तशिल्प"
+    },
+    {
+      "name": "stay",
+      "patterns": [
+        "\\bhotel\\b",
+        "\\bstay\\b",
+        "\\baccommodation\\b",
+        "\\bhostel\\b",
+        "\\bguesthouse\\b",
+        "\\blodge\\b",
+        "\\bresort\\b",
+        "\\bwhere to stay\\b",
+        "होटल",
+        "रहना",
+        "ठहरना",
+        "आवास",
+        "रिज़ॉर्ट"
+      ],
+      "expansion": "stay hotels accommodation hostel guesthouse lodge resort where to stay budget luxury होटल आवास"
+    },
+    {
+      "name": "weather",
+      "patterns": [
+        "\\bweather\\b",
+        "\\bclimate\\b",
+        "\\bseason\\b",
+        "\\bwinter\\b",
+        "\\bsummer\\b",
+        "\\bmonsoon\\b",
+        "\\bbest time\\b",
+        "\\bwhen to visit\\b",
+        "मौसम",
+        "जलवायु",
+        "सर्दी",
+        "गर्मी",
+        "बरसात"
+      ],
+      "expansion": "weather climate best time to visit season temperature monsoon winter summer मौसम जलवायु"
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+.frame {
+  width: min(1240px, 100%);
+  min-height: 720px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  margin: 0 auto;
+}
+
+/* ── Slides ── */
+.slides { position: absolute; inset: 0; }
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 900ms ease, transform 1400ms ease;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  transition: transform 7s ease;
+}
+
+.slide.active::before { transform: scale(1); }
+
+.slide[data-city="Udaipur"]::before { background-image: var(--udaipur-img); }
+.slide[data-city="Delhi"]::before   { background-image: var(--delhi-img); }
+.slide[data-city="Mumbai"]::before  { background-image: var(--mumbai-img); }
+
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5,9,18,0.28) 0%, rgba(6,10,18,0.18) 18%, rgba(7,10,19,0.12) 30%, rgba(8,11,18,0.58) 72%, rgba(5,8,14,0.86) 100%),
+    linear-gradient(90deg, rgba(5,8,14,0.66) 0%, rgba(5,8,14,0.15) 48%, rgba(5,8,14,0.38) 100%);
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  z-index: 2;
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 42px 30px;
+}
+
+.heroMain {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: end;
+  margin-top: 40px;
+  min-height: 420px;
+}
+
+.copy { max-width: 720px; align-self: center; }
+
+.eyebrow {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 12px;
+}
+
+.cityTitle {
+  margin: 0;
+  font-size: clamp(4rem, 10vw, 7.4rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-shadow: 0 14px 36px rgba(0,0,0,0.3);
+}
+
+.cityDesc {
+  max-width: 600px;
+  margin: 18px 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.rightRail {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+.ghostBtn {
+  border: 1px solid rgba(255,255,255,0.22);
+  color: white;
+  background: rgba(255,255,255,0.08);
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  backdrop-filter: blur(10px);
+}
+
+.ghostBtn:hover {
+  background: rgba(121,231,255,0.16);
+  border-color: rgba(121,231,255,0.58);
+  transform: translateY(-2px);
+}
+
+.quickStat {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 16px 10px;
+  border-left: 1px solid rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.78);
+  font-size: 0.82rem;
+  letter-spacing: 0.26em;
+  align-self: end;
+}
+
+/* ── Mini panels ── */
+.miniPanels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.22);
+  margin-top: 28px;
+}
+
+.miniCard {
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.06));
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.miniCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(121,231,255,0.42);
+  background: linear-gradient(180deg, rgba(121,231,255,0.16), rgba(255,255,255,0.06));
+}
+
+.miniCard h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.miniCard p {
+  margin: 0;
+  color: rgba(255,255,255,0.84);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+/* ── Controls ── */
+.controls {
+  position: absolute;
+  inset: 50% 22px auto 22px;
+  transform: translateY(-50%);
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.arrow {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(7,11,18,0.34);
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 220ms ease, background 220ms ease;
+  backdrop-filter: blur(10px);
+}
+
+.arrow:hover {
+  transform: scale(1.04);
+  background: rgba(121,231,255,0.16);
+}
+
+/* ── Footer ── */
+.footerStrip {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.92rem;
+}
+
+.dots { display: flex; gap: 8px; align-items: center; }
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.16);
+  cursor: pointer;
+  transition: transform 220ms ease, background 220ms ease, width 220ms ease;
+  backdrop-filter: blur(10px);
+}
+
+.dotActive {
+  composes: dot;
+  width: 32px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), white);
+  border-color: transparent;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .heroMain { grid-template-columns: 1fr; }
+  .rightRail { align-items: flex-start; min-height: auto; gap: 18px; }
+  .quickStat {
+    writing-mode: initial;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.28);
+    padding: 10px 0 0;
+    letter-spacing: 0.18em;
+  }
+}
+
+@media (max-width: 860px) {
+  .frame { min-height: 840px; }
+  .hero { padding: 26px 18px 22px; }
+  .miniPanels { grid-template-columns: 1fr; }
+  .controls { inset: auto 18px 88px 18px; transform: none; }
+  .footerStrip { bottom: 10px; width: calc(100% - 36px); justify-content: space-between; }
+  .cityTitle { font-size: clamp(3rem, 16vw, 5.5rem); }
+}

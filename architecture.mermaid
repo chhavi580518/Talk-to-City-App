@@ -1,0 +1,22 @@
+graph TB
+    User(["👤 User Browser"])
+
+    subgraph pod["Podman Pod / Docker Network"]
+        FE["🌐 React + Nginx<br/>talktocity-frontend<br/>:5173"]
+        BE["⚙️ FastAPI<br/>talktocity-backend<br/>:8000"]
+        DB[("🗄️ PostgreSQL + pgvector<br/>talktocity-db<br/>:5432")]
+    end
+
+    Gemini["☁️ Google Gemini API<br/>generativelanguage.googleapis.com"]
+
+    User -->|"HTTP :5173"| FE
+    FE -->|"/api/* proxy"| BE
+    BE -->|"SQL + vector search"| DB
+    BE -->|"HTTPS (LLM generation)"| Gemini
+
+    style pod fill:#1B2A4A,stroke:#00A3C4,color:#fff
+    style FE fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style BE fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style DB fill:#1B2A4A,stroke:#79e7ff,color:#fff
+    style Gemini fill:#0F9D58,stroke:#00A3C4,color:#fff
+    style User fill:#374151,stroke:#79e7ff,color:#fff

@@ -1,0 +1,35 @@
+flowchart TD
+    START["ingest.py starts"]
+    FILES["find_chunk_files()\nper city: large > original\nnever both"]
+    LOAD["Load all chunks\nfrom selected files"]
+    DBCHECK["get chunk_ids from DB\ngrouped by city"]
+
+    subgraph loop["For each city"]
+        NOTINDB{"City in DB?"}
+        SAME{"chunk_ids\nidentical?"}
+        INSERT["INSERT all chunks"]
+        SKIP["SKIP\nalready up to date"]
+        DELETE["DELETE old chunks\nfor this city"]
+        INSERT2["INSERT new chunks"]
+    end
+
+    DONE["Done"]
+
+    START --> FILES --> LOAD --> DBCHECK --> loop
+    NOTINDB -->|"No"| INSERT
+    NOTINDB -->|"Yes"| SAME
+    SAME -->|"Yes"| SKIP
+    SAME -->|"No (rechunked)"| DELETE --> INSERT2
+    INSERT --> DONE
+    SKIP --> DONE
+    INSERT2 --> DONE
+
+    style START fill:#1B2A4A,stroke:#79e7ff,color:#fff
+    style FILES fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style LOAD fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style DBCHECK fill:#2E6DA4,stroke:#79e7ff,color:#fff
+    style INSERT fill:#1A5E20,stroke:#79e7ff,color:#fff
+    style INSERT2 fill:#1A5E20,stroke:#79e7ff,color:#fff
+    style SKIP fill:#374151,stroke:#79e7ff,color:#fff
+    style DELETE fill:#7B2D2D,stroke:#ff7979,color:#fff
+    style DONE fill:#1B2A4A,stroke:#00A3C4,color:#fff

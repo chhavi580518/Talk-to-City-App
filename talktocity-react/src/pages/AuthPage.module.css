@@ -1,0 +1,16 @@
+.frame { width: min(1240px,100%); min-height: 720px; border: 1px solid rgba(255,255,255,0.16); border-radius: 26px; overflow: hidden; position: relative; box-shadow: var(--shadow); background: rgba(255,255,255,0.04); backdrop-filter: blur(12px); margin: 0 auto; display: flex; flex-direction: column; }
+.shell { flex: 1; display: grid; place-items: center; padding: 40px; position: relative; overflow: hidden; }
+.shell::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(121,231,255,0.16), transparent 22%), radial-gradient(circle at 70% 70%, rgba(255,199,230,0.14), transparent 24%); pointer-events: none; }
+.card { width: min(440px,100%); position: relative; z-index: 2; background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); border: 1px solid rgba(255,255,255,0.14); border-radius: 28px; box-shadow: var(--shadow); padding: 40px 36px; backdrop-filter: blur(10px); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.logo { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; }
+.logoMark { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #ffffff); box-shadow: 0 0 20px rgba(121,231,255,0.48); }
+.title { margin: 0; font-size: 2.4rem; font-weight: 800; background: linear-gradient(90deg, var(--accent), white); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.subtitle { margin: 12px 0 0; color: rgba(255,255,255,0.72); line-height: 1.65; font-size: 0.95rem; max-width: 320px; }
+.divider { width: 100%; height: 1px; background: rgba(255,255,255,0.12); margin: 28px 0; }
+.googleBtnWrap { min-height: 48px; display: flex; align-items: center; justify-content: center; }
+.signingIn { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+.error { margin-top: 16px; padding: 12px 16px; border-radius: 12px; background: rgba(255,80,80,0.1); border: 1px solid rgba(255,100,100,0.3); color: rgba(255,180,180,0.9); font-size: 0.88rem; width: 100%; }
+.terms { margin-top: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.38); line-height: 1.5; max-width: 300px; }
+.backLink { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; color: rgba(255,255,255,0.6); cursor: pointer; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+.backLink:hover { color: var(--accent); }
+@media (max-width: 860px) { .shell { padding: 22px 18px; } .card { padding: 28px 20px; } }
